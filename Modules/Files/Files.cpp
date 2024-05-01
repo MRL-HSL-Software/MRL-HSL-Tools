@@ -68,25 +68,25 @@
             std::string new_file = "";
             switch (mode) {
                 case RENAME_TO_ID_AND_DATE_AND_TIME:
-                    new_file = std::to_string(i) + "_" + std::to_string(datetime.current.year) + "_" + std::to_string(datetime.current.month) + "_" + std::to_string(datetime.current.day) + "_" + std::to_string(datetime.current.hour) + "_" + std::to_string(datetime.current.minute) + "_" + std::to_string(datetime.current.second) + "_";
+                    new_file = std::to_string(i) + "_" + std::to_string(datetime.current.year) + "_" + std::to_string(datetime.current.month) + "_" + std::to_string(datetime.current.day) + "_" + std::to_string(datetime.current.hour) + "_" + std::to_string(datetime.current.minute) + "_" + std::to_string(datetime.current.second) + ".png";
                     break;
                 case RENAME_TO_DATE_AND_TIME:
-                    new_file = std::to_string(datetime.current.year) + "_" + std::to_string(datetime.current.month) + "_" + std::to_string(datetime.current.day) + "_" + std::to_string(datetime.current.hour) + "_" + std::to_string(datetime.current.minute) + "_" + std::to_string(datetime.current.second) + "_";
+                    new_file = std::to_string(datetime.current.year) + "_" + std::to_string(datetime.current.month) + "_" + std::to_string(datetime.current.day) + "_" + std::to_string(datetime.current.hour) + "_" + std::to_string(datetime.current.minute) + "_" + std::to_string(datetime.current.second) + ".png";
                     break;
                 case RENAME_TO_ID_AND_TIME:
-                    new_file = std::to_string(i) + "_" + std::to_string(datetime.current.hour) + "_" + std::to_string(datetime.current.minute) + "_" + std::to_string(datetime.current.second) + "_";
+                    new_file = std::to_string(i) + "_" + std::to_string(datetime.current.hour) + "_" + std::to_string(datetime.current.minute) + "_" + std::to_string(datetime.current.second) + ".png";
                     break;
                 case RENAME_TO_ID_AND_DATE:
-                    new_file = std::to_string(i) + "_" + std::to_string(datetime.current.year) + "_" + std::to_string(datetime.current.month) + "_" + std::to_string(datetime.current.day) + "_";
+                    new_file = std::to_string(i) + "_" + std::to_string(datetime.current.year) + "_" + std::to_string(datetime.current.month) + "_" + std::to_string(datetime.current.day) + ".png";
                     break;
                 case RENAME_TO_DATE:
-                    new_file = std::to_string(datetime.current.year) + "_" + std::to_string(datetime.current.month) + "_" + std::to_string(datetime.current.day) + "_";
+                    new_file = std::to_string(datetime.current.year) + "_" + std::to_string(datetime.current.month) + "_" + std::to_string(datetime.current.day) + ".png";
                     break;
                 case RENAME_TO_TIME:
-                    new_file = std::to_string(datetime.current.hour) + "_" + std::to_string(datetime.current.minute) + "_" + std::to_string(datetime.current.second) + "_";
+                    new_file = std::to_string(datetime.current.hour) + "_" + std::to_string(datetime.current.minute) + "_" + std::to_string(datetime.current.second) + ".png";
                     break;
                 case RENAME_TO_ID:
-                    new_file = std::to_string(i) + "_" + file;
+                    new_file = std::to_string(i) + ".png";
                     break;
             }
             std::string old_path = path + "/" + file;

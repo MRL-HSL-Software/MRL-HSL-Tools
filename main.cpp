@@ -43,7 +43,7 @@
                             std::cout << TAB LOG "Renaming Files ..." << std::endl;
                             tools.modules.files.rename_files(
                                 TOOLS_LABELING_SOURCE_IMAGES_PATH,
-                                RENAME_TO_ID_AND_DATE_AND_TIME
+                                RENAME_TO_ID_AND_TIME
                             );
                             std::cout << TAB LOG "Files Renamed Successfully" << std::endl;
                             std::vector<std::string> files = tools.modules.files.open_dir(

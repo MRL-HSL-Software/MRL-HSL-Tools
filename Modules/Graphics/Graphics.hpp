@@ -23,6 +23,13 @@
     # ifndef MRL_HSL_TOOLS_MODULES_CONFIGS
         # include "../Configs.hpp"
     # endif // MRL_HSL_TOOLS_MODULES_CONFIGS
+    //-- Include Vectors
+    # ifndef _GLIBCXX_VECTOR
+        # include <vector>
+    # endif // _GLIBCXX_VECTOR
+    /**
+     * @brief Control Window Class Definition
+     */
     class ControlWindow {
         public:
             /**
@@ -57,6 +64,21 @@
     class Graphics {
         public:
             /**
+             * @brief Mouse Struct
+             */
+            struct Mouse {
+                int x;
+                int y;
+                cv::MouseEventTypes event;
+            };
+            /**
+             * @brief Mouse
+             * @param event Event of Mouse
+             * @param x X Coordinate of Mouse
+             * @param y Y Coordinate of Mouse
+             */
+            Mouse mouse;
+            /**
              * @brief Main Window Matrix
              */
             cv::Mat window;
@@ -76,7 +98,7 @@
              * @param flags
              * @param userdata
              */
-            static void onMouseCallback(int event, int x, int y, int flags, void* userdata);
+            // static void onMouseCallback(int event, int x, int y, int flags, void* userdata);
             /**
              * @brief Mouse Event
              * @param event
@@ -84,6 +106,6 @@
              * @param y
              * @param flags
              */
-            void onMouse(int event, int x, int y, int flags);
+            // void onMouse(int event, int x, int y, int flags);
     };
 # endif // MRL_HSL_TOOLS_GRAPHICS

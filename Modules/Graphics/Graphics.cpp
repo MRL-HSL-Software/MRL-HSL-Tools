@@ -27,7 +27,7 @@
         cv::imshow(TOOLS_CONTROL_WINDOW_NAME, window);
         cv::moveWindow(
             TOOLS_CONTROL_WINDOW_NAME,
-            TOOLS_CONTROL_WINDOW_WIDTH + scrn->width / 2 + window.cols,
+            TOOLS_WINDOW_WIDTH / 2 + scrn->width / 2,
             scrn->height / 2 - window.rows / 2
         );
         //-- Set Mouse Callback
@@ -90,7 +90,7 @@
             scrn->height / 2 - window.rows / 2
         );
         //-- Set Mouse Callback
-        cv::setMouseCallback(TOOLS_WINDOW_NAME, onMouseCallback, this);
+        // cv::setMouseCallback(TOOLS_WINDOW_NAME, onMouseCallback, this);
         // cv::imshow(TOOLS_WINDOW_NAME, window);
         // cv::waitKey(0);
         //-- Close Display
@@ -104,10 +104,10 @@
      * @param flags
      * @param userdata
      */
-    void Graphics::onMouseCallback(int event, int x, int y, int flags, void* userdata) {
-        Graphics* graphics = (Graphics*)userdata;
-        graphics->onMouse(event, x, y, flags);
-    }
+    // void Graphics::onMouseCallback(int event, int x, int y, int flags, void* userdata) {
+    //     Graphics* graphics = (Graphics*)userdata;
+    //     graphics->onMouse(event, x, y, flags);
+    // }
     /**
      * @brief Mouse Event
      * @param event
@@ -115,13 +115,16 @@
      * @param y
      * @param flags
      */
-    void Graphics::onMouse(int event, int x, int y, int flags) {
-        if (event == cv::EVENT_LBUTTONDOWN) {
-            cv::circle(window, cv::Point(x, y), 10, cv::Scalar(0, 0, 255), -1);
-            cv::imshow(TOOLS_WINDOW_NAME, window);
-        } else if (event == cv::EVENT_MOUSEMOVE) {
-            // cv::circle(window, cv::Point(x, y), 10, cv::Scalar(0, 255, 0), -1);
-            // cv::imshow(TOOLS_WINDOW_NAME, window);
-        }
-    }
+    // void Graphics::onMouse(int event, int x, int y, int flags) {
+    //     if (event == cv::EVENT_LBUTTONDOWN) {
+    //         mouse.x = x;
+    //         mouse.y = y;
+    //         mouse.event = cv::EVENT_LBUTTONDOWN;
+    //         // cv::circle(window, cv::Point(x, y), 10, cv::Scalar(0, 0, 255), -1);
+    //         // cv::imshow(TOOLS_WINDOW_NAME, window);
+    //     } else if (event == cv::EVENT_MOUSEMOVE) {
+    //         // cv::circle(window, cv::Point(x, y), 10, cv::Scalar(0, 255, 0), -1);
+    //         // cv::imshow(TOOLS_WINDOW_NAME, window);
+    //     }
+    // }
 # endif // MRL_HSL_TOOLS_GRAPHICS

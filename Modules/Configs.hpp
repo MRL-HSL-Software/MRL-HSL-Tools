@@ -48,11 +48,11 @@
     /**
      * @brief Window Width
      */
-    # define TOOLS_WINDOW_WIDTH 1800
+    # define TOOLS_WINDOW_WIDTH 1200
     /**
      * @brief Window Height
      */
-    # define TOOLS_WINDOW_HEIGHT 1400
+    # define TOOLS_WINDOW_HEIGHT 850
     /**
      * @brief Window Name
      */
@@ -68,11 +68,11 @@
     /**
      * @brief Control Window Width
      */
-    # define TOOLS_CONTROL_WINDOW_WIDTH 500
+    # define TOOLS_CONTROL_WINDOW_WIDTH 450
     /**
      * @brief Control Window Height
      */
-    # define TOOLS_CONTROL_WINDOW_HEIGHT 1200
+    # define TOOLS_CONTROL_WINDOW_HEIGHT 850
     /**
      * @brief Control Window Name
      */
@@ -81,7 +81,23 @@
      * @brief Control Window Background Color
      * @note Format is BGR 
      */
-    # define TOOLS_CONTROL_WINDOW_BACKGROUND_COLOR {37, 26, 5}
+    # define TOOLS_CONTROL_WINDOW_BACKGROUND_COLOR {13, 5, 0}
+    /**
+     * @brief Zoom Radius
+     */
+    # define DEFAULT_ZOOM_RADIUS 40
+    /**
+     * @brief Zoom Window X Position
+     */
+    # define ZOOM_WINDOW_X (TOOLS_CONTROL_WINDOW_WIDTH / 2)
+    /**
+     * @brief Zoom Window X Position
+     */
+    # define ZOOM_WINDOW_Y (TOOLS_CONTROL_WINDOW_HEIGHT * 0.8)
+    /**
+     * @brief Zoom Window Radius Size
+     */
+    # define ZOOM_WINDOW_RADIUS (TOOLS_CONTROL_WINDOW_WIDTH * 0.4)
     // ----------------------------- //
     // -- Labeling Configurations -- //
     // ----------------------------- //
